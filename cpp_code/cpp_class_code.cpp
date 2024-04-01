@@ -4,12 +4,14 @@
 #include <iostream>
 
 void ch2Fun();
+void ch3Fun();
 
 using namespace std;
 
 int main()
 {
-    ch2Fun();
+    //ch2Fun();
+   ch3Fun();
     //cout << "Hello World!\n";
 }
 
