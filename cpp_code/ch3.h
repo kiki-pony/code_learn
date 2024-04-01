@@ -9,6 +9,10 @@ public:
 	int switchType();	//数制转换 03_02
 	double arctan(double x);	//求arctan的值  03_03
 	bool symm(unsigned n);	//判断是否是回文数， 11^2=121，11^3=1331  03_04
+	double tsin(double x);	//计算sin的值
+	double countFun(double r, double s);	//计算分段函数	03_05
+	int fac(int n);		//求n的阶乘  03_08
+	int comm(int n, int k);	//用递归从n个人中选k个人组成不同组合数 03_09
 };
 
 double ch3::power(double x, int n) {
@@ -60,4 +64,56 @@ bool ch3::symm(unsigned n) {
 	return m == n;
 }
 
+double ch3::tsin(double x) {
+	double sqr = x * x;
+	double e = x;
+	double r = 0;
+	int i = 1;
+	int
+		n = 1;
+	//double f = e / n;
+	while (e/n >= 1e-10) {
+		double f = e / n;
+		r = (i % 4 == 1) ? r + f : r - f;   //符号
+		e = e * sqr;
+		i += 2;
+		n = n * (i - 1) * i;
+		
+	}
+	double g = 0;
+	/*double t = x;
+	int n = 1;
+	do{
+		g += t;
+		n++;
+		t = -t * x * x / (2 * n - 1) / (2 * n - 2);
+	} while (fabs(t) >= 1e-10);*/
+
+	return r;
+}
+
+double ch3::countFun(double r, double s) {
+	double k = 0;
+	double a = tsin(r);
+	double b = tsin(s);
+	if (r * r <= s * s) {
+		k = sqrt(a * a + b * b);
+	}
+	else {
+		k = tsin(r * s) / 2;
+	}
+	cout << k;
+	return k;
+}
+
+int ch3::fac(int n) {
+	if (n > 0) return n* fac(n - 1);
+	if (n == 0) return 1;
+}
+
+int ch3::comm(int n, int k) {
+	if (k > n) return 0;
+	if (n == k || k == 0) return 1;
+	return comm(n - 1, k) + comm(n - 1, k - 1);
+}
 

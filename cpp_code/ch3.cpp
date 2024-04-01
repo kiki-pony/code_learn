@@ -14,7 +14,11 @@ void ch3Fun() {
 	Ch3.power(x,n);*/
 	//Ch3.switchType();
 	//cout << "PI:"<<getPI();
-	findSymm();
+	//findSymm();
+	//Ch3.countFun(5, 8);
+	//Ch3.arctan(1/5.0);
+	//cout << Ch3.fac(6);
+	cout << Ch3.comm(5,9);
 }
 
 
