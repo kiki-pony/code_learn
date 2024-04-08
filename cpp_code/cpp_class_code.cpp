@@ -5,13 +5,15 @@
 
 void ch2Fun();
 void ch3Fun();
+void ch4Fun();
 
 using namespace std;
 
 int main()
 {
     //ch2Fun();
-   ch3Fun();
+   //ch3Fun();
+    ch4Fun();
     //cout << "Hello World!\n";
 }
 
