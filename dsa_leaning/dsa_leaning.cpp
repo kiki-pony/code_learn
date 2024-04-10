@@ -3,9 +3,14 @@
 
 #include <iostream>
 
+int ListBaseFun();  //顺序表
+int singleListFun();    //单链表
+
 int main()
 {
-    std::cout << "Hello World!\n";
+    //ListBaseFun();
+    singleListFun();
+    //std::cout << "Hello World!\n";
 }
 
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单
