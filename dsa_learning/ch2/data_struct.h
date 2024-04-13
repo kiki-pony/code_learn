@@ -15,20 +15,20 @@ typedef struct {	//顺序表结构，动态分配	2.2
 	int Maxsize, length;
 }SeqList;
 
-typedef struct LNode {	//单链表结点类型，2.3.1
+typedef struct LNode {	//单链表结点类型，2.3.1，循环单链表节点类型
 	int data;
 	struct LNode* next;
-}LNode,*LinkList;
+}LNode, * LinkList;
 
-typedef struct DNode {	//双链表节点类型，2.3.3
+typedef struct DNode {	//双链表节点类型，2.3.3，循环双链表节点类型
 	int data;
 	struct DNode* next, * prior;
-}DNode,*DLinkList;
+}DNode, * DLinkList;
 
-typedef struct {	//静态链表，2.3.5
+typedef struct SNode{	//静态链表节点类型，2.3.5，默认长度为10
 	int data;
 	int next;
-}SLinkList[MaxSize];
+}SNode,*SLinkList[MaxSize];
 
 
 class data_struct

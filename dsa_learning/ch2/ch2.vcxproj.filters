@@ -15,30 +15,25 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="dsa_leaning.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="ch2_List.cpp">
+    <ClCompile Include="ch2.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="data_struct.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="List.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="2.2.3_01.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ch2_List.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="resource.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="data_struct.h">
       <Filter>头文件</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="dsa_leaning.rc">
-      <Filter>资源文件</Filter>
-    </ResourceCompile>
+    <ClInclude Include="List.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
