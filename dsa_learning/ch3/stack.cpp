@@ -6,7 +6,7 @@ void stack::InitStack(SqStack &S) {
 	S.top = -1;	
 }
 
-bool stack::StackEmpty(SqStack& S) {
+inline bool stack::StackEmpty(SqStack& S) {
 	return S.top == -1;
 }
 
@@ -16,7 +16,13 @@ bool stack::PushStack(SqStack& S, int x) {
 	return true;
 }
 
-bool stack::PopStack(SqStack& S, int x) {
+//bool stack::PopStack(SqStack& S, int x) {
+//	if (S.top == -1) return false;
+//	x = S.data[S.top--];
+//	return true;
+//}
+
+bool stack::PopStack(SqStack& S, unsigned  x) {
 	if (S.top == -1) return false;
 	x = S.data[S.top--];
 	return true;
@@ -67,4 +73,29 @@ bool linkStackFun::GetAllEle(LinkStack& S) {
 	}
 	cout << endl;
 	return true;
+}
+
+
+
+
+bool stackApply::bracketCheck(char str[], int length) {
+	SqStack S;
+	stack stack;
+	stack.InitStack(S);	//初始化栈
+	for (int i = 0; i < length; i++){
+		if(str[i]=='(' || str[i] == '[' || str[i] == '{') {
+			stack.PushStack(S, str[i]);   //左括号入栈
+		}
+		else {
+			if (stack.StackEmpty(S)) return false;
+			char topEle = ' ';
+			stack.PopStack(S, topEle);		//栈顶元素出栈
+			//是否匹配
+			//if (str[i] != topEle) return false;	//直接使用这种无法比较
+			if (str[i] == '(' && topEle != ')') return false;
+			if (str[i] == '[' && topEle != ']') return false;
+			if (str[i] == '{' && topEle != '}') return false;
+		}
+	}
+	return stack.StackEmpty(S);
 }

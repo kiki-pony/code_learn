@@ -6,7 +6,7 @@ public:
 	void InitStack(SqStack& S);		//初始化顺序栈
 	bool StackEmpty(SqStack& S);	//判断栈空
 	bool PushStack(SqStack& S, int x);	//进栈
-	bool PopStack(SqStack& S, int x);	//出栈
+	bool PopStack(SqStack& S,unsigned x);	//出栈
 	bool GetTop(SqStack& S, int& x);	//获取栈顶元素
 };	
 //共享栈
@@ -24,3 +24,9 @@ public:
 	bool GetAllEle(LinkStack& S);	//输出所有值
 };
 
+
+//栈的应用
+class stackApply {
+public:
+	bool bracketCheck(char str[], int length);	//括号匹配问题
+};

@@ -16,7 +16,7 @@ typedef struct {		//3.1 共享栈
 	int top2;
 }ShStack;
 
-typedef struct LinkNode {	//3.1 链栈
+typedef struct LinkNode {	//3.1 链栈节点
 	int data;
 	struct LinkNode* next;
 }LinkNode,*LinkStack;
@@ -26,6 +26,9 @@ typedef struct {		//3.2 队列
 	int front, rear;
 }SqQueue;
 
+typedef struct {	//3.2 链式队列
+	LinkNode* front, * rear;
+}LinkQueue;
 
 class data_struct
 {
